@@ -9,6 +9,12 @@ export class App extends Component {
     filter: '',
   }
 
+  componentDidMount() {
+    const contacts = localStorage.getItem('contacts')
+    const parsedContacts = JSON.parse(contacts)
+    this.setState({ contacts: parsedContacts })
+  }
+
   handleChange = evt => {
     const { name, value } = evt.target
     this.setState({ [name]: value })
@@ -43,6 +49,12 @@ export class App extends Component {
     }
 
     this.setState({ contacts: contacts })
+  }
+
+  componentDidUpdate(prevState) {
+    if (this.state.contacts !== prevState.contacts) {
+      localStorage.setItem('contacts', JSON.stringify(this.state.contacts))
+    }
   }
 
   render() {
