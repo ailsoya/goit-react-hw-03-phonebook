@@ -1,0 +1,54 @@
+.Form {
+    border: 2px rgb(122, 122, 122) solid;
+    width: 400px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    row-gap: 18px;
+}
+
+.Label {
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    flex-wrap: wrap;
+    row-gap: 8px;
+    width: 270px;
+}
+
+.SubmitButton {
+    font-size: 14px;
+    width: 100px;
+    height: 25px;
+    border-radius: 5px;
+    outline: none;
+    background-color: cornflowerblue;
+    border: 1px cornflowerblue solid;
+    color: white;
+    cursor: pointer;
+}
+
+.Filter {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    row-gap: 8px;
+    width: 270px;
+    font-size: 18px;
+}
+
+.ContactLi {
+    font-size: 18px;
+}
+
+.ContactLi button {
+    margin-left: 12px;
+    font-size: 12px;
+    background-color: transparent;
+    border-radius: 6px;
+    outline: none;
+    border: 1px rgba(122, 122, 122, 0.615) solid;
+    padding: 2px 5px 2px 5px;
+    cursor: pointer;
+}
