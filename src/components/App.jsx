@@ -63,7 +63,11 @@ export class App extends Component {
     const filteredContacts = contacts.filter(contact =>
       contact.name.toLowerCase().includes(normFilter)
     )
-    return filteredContacts
+    if(filteredContacts==='') {
+      return contacts
+    } else {
+      return filteredContacts
+    }
   }
 
   render() {
