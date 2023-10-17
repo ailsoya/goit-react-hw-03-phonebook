@@ -57,12 +57,18 @@ export class App extends Component {
     }
   }
 
-  render() {
+  filterContacts() {
     const { contacts, filter } = this.state
     const normFilter = filter.toLowerCase()
     const filteredContacts = contacts.filter(contact =>
       contact.name.toLowerCase().includes(normFilter)
     )
+    return filteredContacts
+  }
+
+  render() {
+    const { filter } = this.state
+    const filteredContacts = this.filterContacts()
 
     return (
       <div>
